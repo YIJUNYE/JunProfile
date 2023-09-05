@@ -1,0 +1,12 @@
+# render.yaml
+
+services:
+  - name: web
+    type: web
+    buildCommand: npm run build
+    startCommand: node index.js # Adjust this based on your entry file
+    env:
+      - key: NODE_ENV
+        value: production
+    publish: ./build # Adjust this path to match your build directory
+

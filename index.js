@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 // 
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
